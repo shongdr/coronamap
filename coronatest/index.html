@@ -32,10 +32,10 @@
 <script>
 	var cities = L.layerGroup();
 
-	L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(cities),
-	L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(cities),
-	L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
-	L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
+	L.marker([37.460353, 126.440653]).bindPopup('This is Littleton, CO.').addTo(cities),
+	L.marker([37.460353, 126.440652]).bindPopup('This is Denver, CO.').addTo(cities),
+	L.marker([37.460353, 126.440651]).bindPopup('This is Aurora, CO.').addTo(cities),
+	L.marker([37.460353, 126.440650]).bindPopup('This is Golden, CO.').addTo(cities);
 
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -47,7 +47,7 @@
 		streets  = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11',   attribution: mbAttr});
 
 	var map = L.map('map', {
-		center: [39.73, -104.99],
+		center: [37.460353, 126.440653],
 		zoom: 10,
 		layers: [grayscale, cities]
 	});
