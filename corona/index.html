@@ -18,12 +18,12 @@
 
 <body>
 	<!-- 배경지도 영역 추가하기-->
-	<div id="map" class="map"></div>
+	<div id="mapid" class="map"></div>
 	<script>
 		var lat = 37.350127; //위도
 		var lng = 127.148092; //경도
 		var zoom = 9; //줌 레벨
-		var mymap = L.map('map', {
+		var mymap = L.map('mapid', {
 			center: [lat, lng],
 			zoom: zoom
 		});
