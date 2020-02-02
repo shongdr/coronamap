@@ -35,7 +35,7 @@
 		}).addTo(mymap);
 		
 		 // Creating a map object
-		 var map = new L.map('mapid', mapOptions);
+		 var map_ob = new L.map('mapid', mapOptions);
 
 		 // Creating a Layer object
 		 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -47,7 +47,7 @@
 		 var marker = L.marker([lat, lng]);
 
 		 // Adding marker to the map
-		 marker.addTo(map);
+		 marker.addTo(map_ob);
 
 		
 	</script>
