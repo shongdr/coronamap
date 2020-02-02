@@ -18,13 +18,13 @@
 
 <body>
 	<!-- 배경지도 영역 추가하기-->
-	<div id="mapid" class="map"></div>
+	<div id="map" class="map"></div>
 	<script>
 		
 		var lat = 37.350127; //위도
 		var lng = 127.148092; //경도
 		var zoom = 9; //줌 레벨
-		var mymap = L.map('mapid', {
+		var map = L.map('map', {
 			center: [lat, lng],
 			zoom: zoom
 		});
@@ -32,10 +32,10 @@
 		//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap); //OSM
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' //화면 오른쪽 하단 attributors
-		}).addTo(mymap);
+		}).addTo(map);
 		
 		 // Creating a map object
-		 var map_ob = new L.map('mapid', mapOptions);
+		 var map_ob = new L.map('map', mapOptions);
 
 		 // Creating a Layer object
 		 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -47,7 +47,7 @@
 		 var marker = L.marker([lat, lng]);
 
 		 // Adding marker to the map
-		 marker.addTo(map_ob);
+		 marker.addTo(map);
 
 		
 	</script>
