@@ -44,6 +44,12 @@
 		 // Adding layer to the map
 		 map.addLayer(layer);
 
+		var circle = L.circle([37.460353, 126.440653], {
+		    color: 'yellow',
+		    fillColor: '#f03',
+		    fillOpacity: 0.5,
+		    radius: 500
+		}).addTo(mymap);
 		
 		var greenIcon = L.icon({
 		    iconUrl: 'leaf-green.png',
