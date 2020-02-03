@@ -30,11 +30,13 @@
 <div id='map'></div>
 
 <script>
+	var person1 = L.layerGroup();
+	L.circle([37.460353, 126.440653], {color: 'yellow', fillColor: '#33ff00', fillOpacity: 0.9, radius: 700}).bindPopup('인천국제공항 Inchon Airport').addTo(person1),
+	L.circle([37.484477, 126.668995], {color: 'yellow', fillColor: '#33ff00', fillOpacity: 0.95, radius: 700}).bindPopup('인천시 의료원 Inchon-si Hospital').addTo(person1);
+
 	var person3 = L.layerGroup();
-
-	L.circle([37.460353, 126.440653], {color: 'yellow', fillColor: '#f03', fillOpacity: 0.9, radius: 700}).bindPopup('인천국제공항 Inchon Airport').addTo(person3),
-	L.circle([37.642295, 126.831124], {color: 'yellow', fillColor: '#ffa500', fillOpacity: 0.9, radius: 700}).bindPopup('일산명지병원 Ilsan Myeong-ji Hospital').addTo(person3);
-
+	L.circle([37.460353, 126.440653], {color: 'yellow', fillColor: '#ffa500', fillOpacity: 0.9, radius: 700}).bindPopup('인천국제공항 Inchon Airport').addTo(person3),
+	L.circle([37.642295, 126.831124], {color: 'yellow', fillColor: '#ffa500', fillOpacity: 0.95, radius: 700}).bindPopup('일산명지병원 Ilsan Myeong-ji Hospital').addTo(person3);
 
 	var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -56,12 +58,15 @@
 	};
 
 	var overlays = {
+		"첫번째 1st": person1,
 		"세번째 3th": person3
 	};
 
 	
 	
 	L.control.layers(baseLayers, overlays).addTo(map);
+	
+	
 </script>
 
 
